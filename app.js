@@ -111,6 +111,9 @@ app.use("/productssectionten", productsSectionTenRouter);
 const subCategoryRouter = require("./routes/subCategoryRouter");
 app.use("/sub_category", subCategoryRouter);
 
+const subcategorySectionZeroRouter = require("./routes/subCategorySectionZeroRouter");
+app.use("/subcategorysectionzero", subcategorySectionZeroRouter);
+
 const subcategorySectionOneRouter = require("./routes/subCategorySectionOneRouter");
 app.use("/subcategorysectionone", subcategorySectionOneRouter);
 
@@ -154,6 +157,19 @@ app.use("/projectquestions", projectQuestionsRouter);
 
 const projectBlogsRouter = require("./routes/projectBlogsRouter");
 app.use("/projectblogs", projectBlogsRouter);
+
+// ###########################################################
+// ###########################################################
+//  Front-end Render
+// ###########################################################
+// ###########################################################
+
+// Home Content Slider routes
+const communityRouter = require("./routes/communityRouter");
+app.use("/community", communityRouter);
+
+const communityOnePostRouter = require("./routes/communityOnePostRouter");
+app.use("/communityonepost", communityOnePostRouter);
 
 // ###########################################################
 // ###########################################################
