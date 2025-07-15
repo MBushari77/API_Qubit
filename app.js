@@ -165,5 +165,5 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-// Start server
+// Start server with 5000
 app.listen(5000, () => console.log("Server running on http://localhost:5000"));
