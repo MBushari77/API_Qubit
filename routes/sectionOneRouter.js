@@ -52,7 +52,7 @@ router.post("/", uploadFields, (req, res) => {
       category_id, headline, image,
       product1_name, product1_description, product1_feature1, product1_feature2, product1_link, product1_specsheet, product1_image,
       product2_name, product2_description, product2_feature1, product2_feature2, product2_link, product2_specsheet, product2_image
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   const values = [
@@ -95,6 +95,7 @@ router.get("/category/:category_id", (req, res) => {
     "SELECT * FROM section_one WHERE category_id = ?",
     [req.params.category_id],
     (err, results) => {
+      console.log(req.params.category_id);
       if (err) return res.status(500).json(err);
       res.json(results);
     }

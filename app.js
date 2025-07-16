@@ -171,6 +171,9 @@ app.use("/community", communityRouter);
 const communityOnePostRouter = require("./routes/communityOnePostRouter");
 app.use("/communityonepost", communityOnePostRouter);
 
+const communityPostesRouter = require("./routes/communityPostesRouter");
+app.use("/communityposts", communityPostesRouter);
+
 // ###########################################################
 // ###########################################################
 //  Front-end Render
