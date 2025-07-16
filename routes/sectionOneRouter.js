@@ -156,7 +156,7 @@ router.put("/:id", uploadFields, (req, res) => {
       headline = ?, image = ?,
       product1_name = ?, product1_description = ?, product1_feature1 = ?, product1_feature2 = ?, product1_link = ?, product1_specsheet = ?, product1_image = ?,
       product2_name = ?, product2_description = ?, product2_feature1 = ?, product2_feature2 = ?, product2_link = ?, product2_specsheet = ?, product2_image = ?
-    WHERE id = ?
+    WHERE category_id = ?
   `;
 
   const values = [
@@ -177,7 +177,7 @@ router.put("/:id", uploadFields, (req, res) => {
     product2_link,
     product2_specsheet,
     product2_image,
-    req.params.id,
+    category_id,
   ];
 
   db.query(query, values, (err, result) => {
