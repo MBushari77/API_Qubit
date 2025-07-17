@@ -80,16 +80,23 @@ router.get("/:id", (req, res) => {
     [req.params.id],
     (err, result) => {
       if (err) return res.status(500).json(err);
+
+      if (!result || result.length === 0) {
+        return res.status(404).json({ message: "Product not found" });
+      }
+
       const data = result[0];
       try {
         data.features = JSON.parse(data.features || "[]");
       } catch {
         data.features = [];
       }
+
       res.json(data);
     }
   );
 });
+
 
 // UPDATE
 router.put("/:id", productUpload, (req, res) => {
