@@ -158,6 +158,14 @@ app.use("/projectquestions", projectQuestionsRouter);
 const projectBlogsRouter = require("./routes/projectBlogsRouter");
 app.use("/projectblogs", projectBlogsRouter);
 
+// Home Content Slider routes
+const projectContentSliderRouter = require("./routes/projectContentSliderRouter");
+app.use("/projectcontentslider", projectContentSliderRouter);
+
+// Home Content Slider routes
+const projectGridContentRouter = require("./routes/projectGridContentRouter");
+app.use("/projegridctcontent", projectGridContentRouter);
+
 // ###########################################################
 // ###########################################################
 //  Front-end Render
