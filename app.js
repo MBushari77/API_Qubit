@@ -108,8 +108,12 @@ app.use("/productssectionten", productsSectionTenRouter);
 //  Sub Category
 // ###########################################################
 // ###########################################################
+
 const subCategoryRouter = require("./routes/subCategoryRouter");
 app.use("/sub_category", subCategoryRouter);
+
+const subCategoryProductsRouter = require("./routes/subCategoryProductsRouter");
+app.use("/subcategoryproducts", subCategoryProductsRouter);
 
 const subcategorySectionZeroRouter = require("./routes/subCategorySectionZeroRouter");
 app.use("/subcategorysectionzero", subcategorySectionZeroRouter);
@@ -181,6 +185,9 @@ app.use("/communityonepost", communityOnePostRouter);
 
 const communityPostesRouter = require("./routes/communityPostesRouter");
 app.use("/communityposts", communityPostesRouter);
+
+const communitySideBlogsRouter = require("./routes/communitySideBlogsRouter");
+app.use("/communitysideblogs", communitySideBlogsRouter);
 
 // ###########################################################
 // ###########################################################
