@@ -191,6 +191,18 @@ app.use("/communitysideblogs", communitySideBlogsRouter);
 
 // ###########################################################
 // ###########################################################
+//  Projects
+// ###########################################################
+// ###########################################################
+
+const singleProjectRouter = require("./routes/singleProjectRouter");
+app.use("/singleproject", singleProjectRouter);
+
+const singleProjectContentRouter = require("./routes/singleProjectContentRouter");
+app.use("/singleprojectcontent", singleProjectContentRouter);
+
+// ###########################################################
+// ###########################################################
 //  Front-end Render
 // ###########################################################
 // ###########################################################
