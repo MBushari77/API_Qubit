@@ -201,6 +201,9 @@ app.use("/singleproject", singleProjectRouter);
 const singleProjectContentRouter = require("./routes/singleProjectContentRouter");
 app.use("/singleprojectcontent", singleProjectContentRouter);
 
+const singleProjectQuestionsRouter = require("./routes/singleProjectQuestionsRouter");
+app.use("/singleprojectquestions", singleProjectQuestionsRouter);
+
 // ###########################################################
 // ###########################################################
 //  Front-end Render
